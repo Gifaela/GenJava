@@ -72,7 +72,8 @@ public class Exercicio5 {
 			break;
 			
 		default:
-				System.out.println("\nOpção inválida!!!");
+			System.out.println("\nOpção inválida!!!");
+			break;
 
 		}
 	}
