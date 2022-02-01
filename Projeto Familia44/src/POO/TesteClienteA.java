@@ -3,7 +3,7 @@ package POO;
 public class TesteClienteA {
 	public static void main(String[] args) {
 		
-		ClienteA cliente1 = new Cliente("Geraldo Vedrossi",1234);
+		ClienteA cliente1 = new ClienteA("Geraldo Vedrossi",1234);
 		
 		cliente1.comprar();
 		

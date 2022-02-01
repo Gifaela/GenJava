@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ClienteA {
 	
-	double vp,vt;
+	double vp,vt; // vp-- valor do produtovt -- valor total
 	
 	Scanner leia = new Scanner(System.in);
 	
@@ -50,7 +50,7 @@ public class ClienteA {
 		this.vt = vt;
 	}
 	
-	public string getNomeCliente() 
+	public String getNomeCliente() 
 	{
 		return nomeCliente;
 	}
@@ -75,7 +75,31 @@ public class ClienteA {
 	
 	public double valorTotal(double vt)
 	{
-		System.out.println("\n valor de cada prorama deve ser inserido");
+		System.out.println("\n valor de cada prorama deve ser inserido"
+	+"individualmente\nPara finalizar entre com 0 ou algum número negativo...");
+		
+		do
+		{
+			System.out.println("\nEntre com o valo: ");
+			
+			vp = leia.nextDouble(); //15
+			if(vp>0)
+			{
+				vt = vt + vp;
+			}
+		}
+		while(vp>0);
+		return vt;
+	}
+	public String getInfo()
+	{
+		String info = nomeCliente + "\t\t" + codigoCliente;
+		return info;
+
+	}
+	public void comprar()
+	{
+		System.out.printf("\nTotal: %.2f", this.valorTotal(0.0));
 	}
 
 }
